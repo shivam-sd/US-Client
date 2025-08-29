@@ -35,7 +35,8 @@ const EventCard = ({_id, title, date, location, image }) => {
 const Events = () => {
   const [events, setEvents] = useState([]);
   const today = new Date();
-
+  
+  // console.log("API URL from env:", import.meta.env.VITE_API_URL);
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -46,8 +47,10 @@ const Events = () => {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
+
+
         const data = await response.json();
-        console.log("data", data);
+        // console.log("data", data);
         setEvents(data);
       } catch (error) {
         console.error("Error fetching events:", error.message);

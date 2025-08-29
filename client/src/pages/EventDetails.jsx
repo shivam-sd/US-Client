@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const EventDetails = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const [event, setEvent] = useState(null);
 
   useEffect(() => {
@@ -15,11 +15,11 @@ const EventDetails = () => {
         const res = await fetch(`${import.meta.env.VITE_API_URL}admin/events/${id}`);
         if (!res.ok) throw new Error("Failed to fetch event details");
         const data = await res.json();
-        console.log("Event data:", data);
+        // console.log("Event data:", data);
         setEvent(data);
       } catch (err) {
         toast.error("Error fetching event details:", err.message);
-        console.error(err);
+        // console.error(err);
       }
     };
     fetchEvent();
