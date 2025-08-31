@@ -20,10 +20,10 @@ const Home = () => {
 
             {/* Overlay Text */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
-                ICAI
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                ICAI Seattle
               </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl mt-2">New York</p>
+              <p className="text-2xl md:text-2xl lg:text-4xl mt-2">New York</p>
             </div>
           </div>
         </div>
@@ -34,8 +34,8 @@ const Home = () => {
           {/* Left: Image */}
           <div className="w-full lg:w-1/3 md:w-1/2 h-80 md:h-96 flex items-center justify-center shadow-2xl rounded-2xl">
             <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6eb210f9-88d2-4a99-9134-93698f3eb6a0.png"
-              alt="ICAI NY"
+              src="https://media.licdn.com/dms/image/v2/D4E03AQGsZ6-rucQSWg/profile-displayphoto-shrink_800_800/B4EZT9Nt6oGYAc-/0/1739415019484?e=1759363200&v=beta&t=KOY9sOfr_Uep8X7IEidKgmMiCUdiowu9MPuS01wW3E8"
+              alt="ICAI Seattle"
               className="h-full object-contain rounded-2xl"
             />
           </div>
@@ -43,24 +43,19 @@ const Home = () => {
           {/* Right: Text and Buttons */}
           <div className="w-full lg:w-1/1 md:w-1/2 text-black">
             <p className="text-base md:text-lg lg:text-2xl leading-relaxed">
-              Welcome to the Institute of Chartered Accountants of India New
-              York Chapter! We are a professional organization dedicated to
-              promoting and advancing the accounting profession in New York and
-              beyond. Our mission is to provide support and resources to our
-              members, as well as to enhance the visibility and credibility of
-              the accounting profession.
+              The ICAI Seattle Representative Office of The Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the State of Washington.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col md:flex-row lg:flex-row gap-4 mt-6">
               <Link
-                to="#"
+                to="https://forms.gle/SRFkbeMCTMB7GQoDA" target="_blanck"
                 className="bg-violet-700 px-6 py-4 rounded-2xl text-white text-lg font-semibold text-center hover:bg-violet-500 duration-300"
               >
-                Become a member of <br /> ICAI NY Chapter
+                Become a member of <br /> ICAI Seattle NY Chapter
               </Link>
               <Link
-                to="#"
+                to="/events"
                 className="bg-blue-700 px-6 py-4 rounded-2xl text-white text-lg font-semibold text-center hover:bg-blue-500 duration-300"
               >
                 Know About <br /> Upcoming <br /> Events
@@ -84,9 +79,9 @@ const Home = () => {
   {/* Image section */}
   <div className="w-full h-72 md:h-96 lg:h-[680px] overflow-hidden rounded-xl shadow-lg">
     <img
-      src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/da03c2f3-f4e5-422e-aad1-993c91f5ef7d.png"
+      src="https://media.licdn.com/dms/image/v2/D4E22AQGTqlp64x9Vvw/feedshare-shrink_800/B4EZiwMImxHoAg-/0/1755302628467?e=1759363200&v=beta&t=FK18x76zkW_yBtajSnICgxWiwG8vNBJW9BmbWe3hxWA"
       alt="Stronger Together"
-      className="w-full h-full object-cover"
+      className="lg:w-full md:w-full w-96 h-full lg:object-cover md:object-cover object-contain"
     />
   </div>
 </div>

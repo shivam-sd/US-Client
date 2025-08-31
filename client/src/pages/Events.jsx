@@ -34,12 +34,14 @@ const EventCard = ({_id, title, date, location, image }) => {
 
 const Events = () => {
   const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(false);
   const today = new Date();
   
   // console.log("API URL from env:", import.meta.env.VITE_API_URL);
   useEffect(() => {
     const fetchEvents = async () => {
       try {
+        setLoading(true);
         const response = await fetch(
           `${import.meta.env.VITE_API_URL}admin/events/fetch`
         );
@@ -52,6 +54,7 @@ const Events = () => {
         const data = await response.json();
         // console.log("data", data);
         setEvents(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching events:", error.message);
       }
@@ -69,7 +72,9 @@ const Events = () => {
   return (
     <>
       <Header />
-      <div className="bg-gray-50 text-gray-900 font-sans py-10 px-4 max-w-6xl mx-auto">
+      {
+        loading ? <div className="text-3xl mt-5 mb-5 text-center font-extrabold bg-red-500 text-white p-3">Waiting For Events....</div> : <>
+        <div className="bg-gray-50 text-gray-900 font-sans py-10 px-4 max-w-6xl mx-auto">
         {upcoming.length > 0 && (
           <section className="mb-12">
             <h1 className="text-3xl font-bold mb-6 border-b pb-2">
@@ -96,6 +101,9 @@ const Events = () => {
           </section>
         )}
       </div>
+        </> 
+      }
+      
       <Footer />
     </>
   );

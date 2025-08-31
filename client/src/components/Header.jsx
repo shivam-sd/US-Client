@@ -99,13 +99,13 @@ const Header = () => {
           <div className="flex items-center gap-4 cursor-pointer hover:gap-5 duration-300">
             <Link to={"/"}>
               <img
-                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1800b28b-1f1a-44de-be44-53ef3f4f0a5a.png"
+                src="https://media.licdn.com/dms/image/v2/D4E03AQGsZ6-rucQSWg/profile-displayphoto-shrink_800_800/B4EZT9Nt6oGYAc-/0/1739415019484?e=1759363200&v=beta&t=KOY9sOfr_Uep8X7IEidKgmMiCUdiowu9MPuS01wW3E8"
                 alt="logo"
                 className="w-14 rounded-full hover:scale-105 transition"
               />
             </Link>
             <Link to={"/"}>
-              <p className="text-3xl font-bold text-blue-700">ICAI NY</p>
+              <p className="text-3xl font-bold text-blue-700">ICAI Seattle</p>
             </Link>
           </div>
 
@@ -141,11 +141,11 @@ const Header = () => {
           <div className="flex p-4 items-center justify-between">
             <div className="flex items-center gap-4 cursor-pointer">
               <img
-                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1800b28b-1f1a-44de-be44-53ef3f4f0a5a.png"
+                src="https://media.licdn.com/dms/image/v2/D4E03AQGsZ6-rucQSWg/profile-displayphoto-shrink_800_800/B4EZT9Nt6oGYAc-/0/1739415019484?e=1759363200&v=beta&t=KOY9sOfr_Uep8X7IEidKgmMiCUdiowu9MPuS01wW3E8"
                 alt=""
                 className="w-10 rounded-full hover:scale-105 transition"
               />
-              <p className="text-xl font-bold text-blue-700">ICAI NY</p>
+              <p className="text-xl font-bold text-blue-700">ICAI Seattle</p>
             </div>
             <button onClick={() => setIsMenu(!isMenu)}>
               <TiThMenu

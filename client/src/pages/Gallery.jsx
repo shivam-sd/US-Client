@@ -5,29 +5,29 @@ import Footer from "../components/Footer";
 const Gallary = () => {
   const EventsCard = [
     {
-      Name: "Networking Events",
-      Img: "https://s29814.pcdn.co/wp-content/uploads/2017/06/shutterstock_479633479.jpg.optimal.jpg",
-    },
-    {
-      Name: "Business Events",
-      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRik3aUj1hjOL9v6JfeDre-GeICYfpev_HRtA&s",
+      Name: "Lead Genration",
+      Img: "../src/assets/gallaryevent.png",
     },
     {
       Name: "Real State",
       Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQywWv-RlOFsYUVd-h6fEwqGomfGbIKQkMSbg&s",
     },
+    // {
+    //   Name: "Networking Events",
+    //   Img: "https://media.licdn.com/dms/image/v2/D4E22AQE0KCwlL8_FSQ/feedshare-shrink_2048_1536/B4EZili10PGwAo-/0/1755124033462?e=1759363200&v=beta&t=IlyFVRJgh_1RJjDt8bS4LdX1-tWdd7QNz5q2SOmxJqQ",
+    // },
     {
-      Name: "Lead Genration",
-      Img: "https://mondo.com/wp-content/smush-webp/2022/04/new-Lead-Generation-768x403.jpg.webp",
+      Name: "🌲 ICAI Seattle Chapter – Summer Hike Invitation 🌲",
+      Img: "https://media.licdn.com/dms/image/v2/D4E22AQEj-CoUaT3u0A/feedshare-shrink_800/B4EZhDs99bHgAg-/0/1753482519608?e=1759363200&v=beta&t=I0JumiZ7PI_Dc5UJGtDbd5lYgAKLTmVj0Dn0JmNe1T4",
     },
-    {
-      Name: "Benifits Of Networking",
-      Img: "https://www.michaelpage.co.in/sites/michaelpage.com.au/files/inline-images/benefits%20of%20networking%2002.jpg",
-    },
-    {
-      Name: "Social Media Guide",
-      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPi6A7hwHS-g0ZWnJfuWLsW4-MZlykNxhWqQ&s",
-    },
+    // {
+    //   Name: "Benifits Of Networking",
+    //   Img: "https://www.michaelpage.co.in/sites/michaelpage.com.au/files/inline-images/benefits%20of%20networking%2002.jpg",
+    // },
+    // {
+    //   Name: "Social Media Guide",
+    //   Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPi6A7hwHS-g0ZWnJfuWLsW4-MZlykNxhWqQ&s",
+    // },
   ];
 
   return (
@@ -38,7 +38,7 @@ const Gallary = () => {
           {EventsCard.map((elm, idx) => {
             return (
               <>
-                <div className="lg:w-[480px] md:w-[400px] w-80 rounded-2xl border mt-14">
+                <div className="lg:w-[480px] md:w-[400px] w-80 rounded-2xl border mt-20">
                   <img
                     src={elm.Img}
                     className="w-full h-full object-cover rounded-2xl"

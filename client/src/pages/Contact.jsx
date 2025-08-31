@@ -3,7 +3,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
+import { CgMail } from "react-icons/cg";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [result, setResult] = useState(null);
@@ -40,12 +42,12 @@ const Contact = () => {
 
   const Carddata = [
     {
-      title: "Q. How can I become a member of the ICAI New York Chapter?",
-      data: "You must first be a member of ICAI. Once you are a member of ICAI, you can sign up for the membership by following the process on our website.",
+      title: "Q. How can I become a member of the ICAI Seattle ?",
+      data: "You must first be a member of ICAI Seattle. Once you are a member of ICAI Seattle, you can sign up for the membership by following the process on our website.",
     },
     {
       title:
-        "Q. What are the benefits of becoming ICAI New York Chapter Member?",
+        "Q. What are the benefits of becoming ICAI Seattle Chapter Member?",
       data: "As a member of our organization, you will have access to a variety of resources and benefits, including networking opportunities, professional development events, and educational resources.",
     },
     {
@@ -175,10 +177,15 @@ const Contact = () => {
               Follow us on social media
             </p>
             <div className="flex items-center gap-20 justify-center mt-6 text-4xl">
+              <Link to={"https://www.linkedin.com/in/icaiseattlechapter/"} target="_blanck">
               <FaLinkedin className="text-blue-500 cursor-pointer" />
+              </Link>
+              <Link to={"https://www.instagram.com/icaiorg?igsh=YW41ZmlweDZtMjF6"} target="_blanck" >
               <FaInstagram className="text-pink-600 cursor-pointer" />
+              </Link>
             </div>
-            <p className="text-xl mt-4">admin@icainy.us</p>
+            <Link className="mt-10 text-red-600 text-4xl" to='mailto:icaiseattle@gmail.com'><CgMail /></Link>
+            {/* <p className="text-xl mt-4">admin@icainy.us</p> */}
           </div>
         </div>
       </div>
