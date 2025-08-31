@@ -32,7 +32,7 @@ const Aboutus = () => {
     {
       name: "Radhika Bhartia",
       role: "Director - CPE Events",
-      img: "../src/assets/RadhikaBhartia.png",
+      img: "/RadhikaBhartia.png",
     },
     {
       name: "Ananya Chidananda",

@@ -17,7 +17,7 @@ const eventPostController = async (req, res) => {
       // Upload image to Cloudinary
       const result = await cloudinary.uploader.upload(file.tempFilePath);
 
-      console.log("Image uploaded to Cloudinary:", result.secure_url);
+      // console.log("Image uploaded to Cloudinary:", result.secure_url);
 
       // Create new event
       const newEvent = new eventModel({

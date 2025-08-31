@@ -87,6 +87,7 @@ const EventPostByAdmin = () => {
       navigate("/admindashboard");
       setErrors({});
     } catch (error) {
+      console.log(error)
       toast.error(error?.response?.data?.error || "Something went wrong!");
       console.error("Error posting event:", error);
     } finally {

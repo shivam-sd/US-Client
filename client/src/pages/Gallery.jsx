@@ -6,7 +6,7 @@ const Gallary = () => {
   const EventsCard = [
     {
       Name: "Lead Genration",
-      Img: "../src/assets/gallaryevent.png",
+      Img: "/gallaryevent.png",
     },
     {
       Name: "Real State",
