@@ -138,7 +138,7 @@ const Contact = () => {
               />
             </div>
 
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <label className="block text-lg font-medium mb-1 text-gray-700">
                 Arriving From
               </label>
@@ -148,7 +148,7 @@ const Contact = () => {
                 name="arriving"
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-            </div>
+            </div> */}
 
             <div className="mb-6">
               <label className="block text-lg font-medium mb-1 text-gray-700">
@@ -177,15 +177,16 @@ const Contact = () => {
               Follow us on social media
             </p>
             <div className="flex items-center gap-20 justify-center mt-6 text-4xl">
-              <Link to={"https://www.linkedin.com/in/icaiseattlechapter/"} target="_blanck">
+              <Link to={"https://www.linkedin.com/groups/14155190/"} target="_blanck">
               <FaLinkedin className="text-blue-500 cursor-pointer" />
               </Link>
-              <Link to={"https://www.instagram.com/icaiorg?igsh=YW41ZmlweDZtMjF6"} target="_blanck" >
+              {/* <Link to={"https://www.instagram.com/icaiorg?igsh=YW41ZmlweDZtMjF6"} target="_blanck" >
               <FaInstagram className="text-pink-600 cursor-pointer" />
-              </Link>
+              </Link> */}
+                <Link className="text-red-600 text-5xl" to='mailto:icaiseattle@gmail.com'><CgMail /></Link>
             </div>
-            <Link className="mt-10 text-red-600 text-4xl" to='mailto:icaiseattle@gmail.com'><CgMail /></Link>
-            {/* <p className="text-xl mt-4">admin@icainy.us</p> */}
+          
+            <p className="text-xl mt-4">admin@icainy.us</p>
           </div>
         </div>
       </div>

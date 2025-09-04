@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const Aboutus = () => {
   const boardMembers = [
     {
-      name: "Nitin Nigam",
+      name: "CA. Nitin Nigam",
       role: "Chair",
       img: "https://media.licdn.com/dms/image/v2/D4D03AQGdImLbez6nSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722901582015?e=1759363200&v=beta&t=Y1yg7LlCLMEa8nEsmtq4C80Wnhu_vYn7SgeAp1qSLIU",
     },
@@ -25,22 +25,22 @@ const Aboutus = () => {
       img: "https://media.licdn.com/dms/image/v2/C5603AQE4HN_nlfQUQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1656473769823?e=1759363200&v=beta&t=DI1m20zi2-vvjf0sDlMqEwddPfMPQru1tmFxLCcn-XQ",
     },
     {
-      name: "Ananya Jauhari",
+      name: "CA. Ananya Jauhari",
       role: "Director - Communication",
       img: "https://media.licdn.com/dms/image/v2/D5603AQF4JI4YmzmyEw/profile-displayphoto-shrink_200_200/B56Zdy2HV3HoAc-/0/1749978478620?e=1759363200&v=beta&t=6wAEKlLV60IFsMZl37kqJzO9Qxpdi3Mltomb-vreV7o",
     },
     {
-      name: "Radhika Bhartia",
+      name: "CA. Radhika Bhartia",
       role: "Director - CPE Events",
       img: "/RadhikaBhartia.png",
     },
     {
-      name: "Ananya Chidananda",
+      name: "CA. Ananya Chidananda",
       role: "Director Membership",
       img: "https://media.licdn.com/dms/image/v2/C5603AQGazldaOkaYuQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1594542809029?e=1759363200&v=beta&t=6GX_AHpKKwODvnIRzQjbgRm0pdB2qi0yCv7FPIvulGE",
     },
     {
-      name: "CA Mayuri Kulkarni",
+      name: "CA. Mayuri Kulkarni",
       role: "Director - Social Media",
       img: "https://media.licdn.com/dms/image/v2/D5603AQGBSqEA9uumtQ/profile-displayphoto-shrink_200_200/B56ZcTCodUHEAY-/0/1748371147740?e=1759363200&v=beta&t=wiBpvRQqzRBZJH-vDopEACeaAWBRU2PJP5yfWPZAyxo",
     },
@@ -57,7 +57,7 @@ const Aboutus = () => {
             About ICAI Seattle
           </h1>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
-            The ICAI Seattle Representative Office of The Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the State of Washington.
+            The ICAI Seattle Chapter of the Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the State of Washington.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
             <span className="text-xl font-extrabold w-full mb-4">Our key objectives are to:</span> 
@@ -70,8 +70,7 @@ const Aboutus = () => {
 5. Work towards the formation of an ICAI Chapter in the Greater Seattle Region. 
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            If you are a Chartered Accountant (CA) from India living in New
-            York, or are interested in joining the ICAI New York Chapter, we
+            If you are a Chartered Accountant (CA) from India living in Seattle, or are interested in joining the ICAI Seattle Chapter, we
             invite you to explore our Membership and LinkedIn pages.
           </p>
         </div>

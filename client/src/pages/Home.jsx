@@ -13,8 +13,8 @@ const Home = () => {
           <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[400px] md:h-[450px] lg:h-[750px] mb-5">
             {/* Background Image */}
             <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/690c171f-077d-49fa-8440-b6ca7aeb3d69.png"
-              alt="ICAI NY"
+              src="/heroImage.jpg"
+              alt="ICAI Seattle"
               className="w-full h-full object-cover brightness-75 transition-transform duration-500 hover:scale-105"
             />
 
@@ -23,7 +23,7 @@ const Home = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
                 ICAI Seattle
               </h1>
-              <p className="text-2xl md:text-2xl lg:text-4xl mt-2">New York</p>
+              {/* <p className="text-2xl md:text-2xl lg:text-4xl mt-2">New York</p> */}
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@ const Home = () => {
           {/* Right: Text and Buttons */}
           <div className="w-full lg:w-1/1 md:w-1/2 text-black">
             <p className="text-base md:text-lg lg:text-2xl leading-relaxed">
-              The ICAI Seattle Representative Office of The Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the State of Washington.
+              The ICAI Seattle Chapter of The Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the State of Washington.
             </p>
 
             {/* CTA Buttons */}
@@ -52,7 +52,7 @@ const Home = () => {
                 to="https://forms.gle/SRFkbeMCTMB7GQoDA" target="_blanck"
                 className="bg-violet-700 px-6 py-4 rounded-2xl text-white text-lg font-semibold text-center hover:bg-violet-500 duration-300"
               >
-                Become a member of <br /> ICAI Seattle NY Chapter
+                Become a member of <br /> ICAI Seattle Chapter
               </Link>
               <Link
                 to="/events"
