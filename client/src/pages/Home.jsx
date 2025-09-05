@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
 
+document.title = "Home || ICAI SEATTLE"
 
   return (
     <>

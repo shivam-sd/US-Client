@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 
 const Aboutus = () => {
 
+  document.title = "About || ICAI SEATTLE"
+
   const boardMembers = [
     {
       name: "CA. Nitin Nigam",

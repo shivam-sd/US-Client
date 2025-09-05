@@ -34,6 +34,7 @@ const EventCard = ({_id, title, date, location, image }) => {
 
 const Events = () => {
 
+  document.title = "Events || ICAI SEATTLE"
 
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);

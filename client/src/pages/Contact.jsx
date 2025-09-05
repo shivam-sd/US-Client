@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
 
+  document.title = "Contact || ICAI SEATTLE"
 
   const [result, setResult] = useState(null);
 

@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 
 const Gallary = () => {
 
+  document.title = "Gallery || ICAI SEATTLE"
 
   const EventsCard = [
     {
@@ -32,11 +33,12 @@ const Gallary = () => {
           {EventsCard.map((elm, idx) => {
             return (
               <>
-                <div className="lg:w-[480px] md:w-[400px] w-80 rounded-2xl border mt-20">
+                <div key={idx} className="lg:w-[480px] md:w-[400px] w-80 rounded-2xl border mt-20">
                   <img
                     src={elm.Img}
                     className="w-full h-full object-cover rounded-2xl"
                     alt=""
+                    loading="lazy"
                   />
                   <p className="text-center mt-1 mb-4 text-2xl">{elm.Name}</p>
                 </div>

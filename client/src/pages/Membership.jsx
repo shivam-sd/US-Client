@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Membership = () => {
 
-
+document.title = "Membership || ICAI SEATTLE"
 
   return (
     <div>

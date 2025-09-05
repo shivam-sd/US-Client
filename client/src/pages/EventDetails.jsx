@@ -5,6 +5,9 @@ import Footer from "../components/Footer";
 import { toast } from "react-toastify";
 
 const EventDetails = () => {
+
+  document.title = "Events Details || ICAI SEATTLE"
+
   const { id } = useParams();
   // console.log(id);
   const [event, setEvent] = useState(null);
