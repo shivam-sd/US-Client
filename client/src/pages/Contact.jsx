@@ -8,6 +8,8 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
+
+
   const [result, setResult] = useState(null);
 
   const handleSubmit = async (e) => {

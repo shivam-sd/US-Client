@@ -3,7 +3,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Gallary = () => {
+
+
   const EventsCard = [
+    {
+      // Name: "Networking Events",
+      Img: "/gallery2.jpg",
+    },
     {
       // Name: "Real State",
       Img: "/gallery1.jpg",
@@ -15,10 +21,6 @@ const Gallary = () => {
     {
       // Name: "Benifits Of Networking",
       Img: "/gallery4.jpg",
-    },
-    {
-      // Name: "Networking Events",
-      Img: "/gallery2.jpg",
     },
   ];
 

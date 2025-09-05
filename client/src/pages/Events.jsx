@@ -33,6 +33,8 @@ const EventCard = ({_id, title, date, location, image }) => {
 };
 
 const Events = () => {
+
+
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
   const today = new Date();

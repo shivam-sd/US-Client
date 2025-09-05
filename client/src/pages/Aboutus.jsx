@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Aboutus = () => {
+
   const boardMembers = [
     {
       name: "CA. Nitin Nigam",
