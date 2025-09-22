@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
-
-  document.title = "Contact || ICAI SEATTLE"
+  document.title = "Contact || ICAI SEATTLE";
 
   const [result, setResult] = useState(null);
+  const [personType, setPersonType] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setResult("sending...");
-    
+
     const formData = new FormData(e.target);
     formData.append("access_key", "46ed6638-b996-48d4-9eb2-dbce99b13c3f");
 
@@ -31,6 +30,7 @@ const Contact = () => {
         setResult("Form Submitted Successfully");
         toast.success("Mail sent successfully!");
         e.target.reset();
+        setPersonType(""); // reset dropdown state
       } else {
         console.error("Error", data);
         toast.error(data.message || "Something went wrong!");
@@ -49,8 +49,7 @@ const Contact = () => {
       data: "You must first be a member of ICAI Seattle. Once you are a member of ICAI Seattle, you can sign up for the membership by following the process on our website.",
     },
     {
-      title:
-        "Q. What are the benefits of becoming ICAI Seattle Chapter Member?",
+      title: "Q. What are the benefits of becoming ICAI Seattle Chapter Member?",
       data: "As a member of our organization, you will have access to a variety of resources and benefits, including networking opportunities, professional development events, and educational resources.",
     },
     {
@@ -112,6 +111,7 @@ const Contact = () => {
                   placeholder="Your full name"
                   name="name"
                   className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
                 />
               </div>
 
@@ -141,17 +141,39 @@ const Contact = () => {
               />
             </div>
 
-            {/* <div className="mb-4">
+            {/* Extra Fields */}
+            <div className="mb-4">
               <label className="block text-lg font-medium mb-1 text-gray-700">
-                Arriving From
+                Details of Person
               </label>
-              <input
-                type="text"
-                placeholder="City or place"
-                name="arriving"
+              <select
+                name="personType"
+                value={personType}
+                onChange={(e) => setPersonType(e.target.value)}
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div> */}
+                required
+              >
+                <option value="">-- Select --</option>
+                <option value="CA">CA</option>
+                <option value="Semi-CA">Semi-CA</option>
+                <option value="Non-CA">Non-CA</option>
+              </select>
+            </div>
+
+            {personType === "CA" && (
+              <div className="mb-4">
+                <label className="block text-lg font-medium mb-1 text-gray-700">
+                  ICAI Membership Number
+                </label>
+                <input
+                  type="text"
+                  name="membershipNumber"
+                  placeholder="Enter ICAI Membership Number"
+                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+            )}
 
             <div className="mb-6">
               <label className="block text-lg font-medium mb-1 text-gray-700">
@@ -171,7 +193,9 @@ const Contact = () => {
             >
               Send
             </button>
-            {result && <p className="mt-3 text-center text-gray-500">{result}</p>}
+            {result && (
+              <p className="mt-3 text-center text-gray-500">{result}</p>
+            )}
           </form>
 
           {/* Social Media */}
@@ -180,16 +204,23 @@ const Contact = () => {
               Follow us on social media
             </p>
             <div className="flex items-center gap-20 justify-center mt-6 text-4xl">
-              <Link to={"https://www.linkedin.com/groups/14155190/"} target="_blanck">
-              <FaLinkedin className="text-blue-500 cursor-pointer" />
+              <Link
+                to={
+                  "https://www.linkedin.com/company/icai-seattle-chapter/posts/?feedView=all"
+                }
+                target="_blank"
+              >
+                <FaLinkedin className="text-blue-500 cursor-pointer" />
               </Link>
-              {/* <Link to={"https://www.instagram.com/icaiorg?igsh=YW41ZmlweDZtMjF6"} target="_blanck" >
-              <FaInstagram className="text-pink-600 cursor-pointer" />
-              </Link> */}
-                <Link className="text-red-600 text-5xl" to='mailto:icaiseattle@gmail.com'><CgMail /></Link>
+              <Link
+                className="text-red-600 text-5xl"
+                to="mailto:icaiseattle@gmail.com"
+              >
+                <CgMail />
+              </Link>
             </div>
-          
-            <p className="text-xl mt-4">admin@icainy.us</p>
+
+            <p className="text-xl mt-4">icaiseattle@gmail.com</p>
           </div>
         </div>
       </div>

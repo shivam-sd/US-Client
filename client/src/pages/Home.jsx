@@ -46,8 +46,12 @@ document.title = "Home || ICAI SEATTLE"
 
           {/* Right: Text and Buttons */}
           <div className="w-full lg:w-1/1 md:w-1/2 text-black">
-            <p className="text-base md:text-lg lg:text-2xl leading-relaxed">
-              The ICAI Seattle Chapter of The Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the State of Washington.
+            <p className="text-base md:text-lg lg:text-2xl">
+              <b>Welcome to the ICAI Seattle Chapter:-</b><br />
+<span className="text-[20px]">The ICAI Seattle Chapter is a vibrant community of Chartered Accountants committed to promoting the highest standards of accounting, finance, and business ethics in the State of Washington. We aim to serve as a hub for professional development, networking, and knowledge exchange, providing our members with resources and opportunities to enhance their careers. Whether you're a seasoned professional or a newcomer to the field, our chapter offers a variety of events, seminars, and workshops to support your growth in the  industry.</span><br /><br />
+<b>Disclaimer:-</b><br />
+ <span className="text-[20px]">The content provided on this website is for informational purposes only. While we strive to ensure the accuracy and relevance of the material, the ICAI Seattle Chapter does not assume responsibility for any errors or omissions. The views and opinions expressed by members and contributors do not necessarily reflect those of the chapter. For professional advice, please consult with a qualified accountant or legal professional.</span>
+
             </p>
 
             {/* CTA Buttons */}
@@ -64,9 +68,28 @@ document.title = "Home || ICAI SEATTLE"
               >
                 Know About <br /> Upcoming <br /> Events
               </Link>
+              <Link
+                to="/contact"
+                className="bg-green-500 px-6 py-4 rounded-2xl text-white text-lg font-semibold text-center hover:bg-blue-500 duration-300"
+              >
+                Want to know <br /> more about us?
+              </Link>
             </div>
           </div>
         </div>
+
+{/* President Image and vice President */}
+<Link to={"https://www.icai.org/category/executive-members-profile"}><h1 className="w-full text-center text-2xl font-bold text-blue-500 mb-2"> President and Vice-President</h1></Link>    
+<div className="w-full p-4 flex items-center justify-around flex-col lg:flex-row gap-5 border-1 border-rose-400/25 rounded-2xl">
+
+<Link to={"https://www.icai.org/post/president"}><img src="https://resource.cdn.icai.org/84403icai-president2025.jpg" alt="President" className="w-72" />
+<p className="text-center w-full font-extrabold mt-2">President</p>
+</Link>
+<Link to={"https://www.icai.org/post/vice-president"}><img src="https://resource.cdn.icai.org/84413newvp-2025.jpg" alt="Vice-President" className="w-60" />
+<p className="text-center w-full font-extrabold mt-2">Vice-President</p>
+</Link>
+</div>
+
 
         {/* Third Section */}
 
@@ -83,7 +106,7 @@ document.title = "Home || ICAI SEATTLE"
   {/* Image section */}
   <div className="w-full h-72 md:h-96 lg:h-[680px] overflow-hidden rounded-xl shadow-lg">
     <img
-      src="https://media.licdn.com/dms/image/v2/D4E22AQGTqlp64x9Vvw/feedshare-shrink_800/B4EZiwMImxHoAg-/0/1755302628467?e=1759363200&v=beta&t=FK18x76zkW_yBtajSnICgxWiwG8vNBJW9BmbWe3hxWA"
+      src="./Team.png"
       alt="Stronger Together"
       className="lg:w-full md:w-full w-96 h-full lg:object-cover md:object-cover object-contain"
     />

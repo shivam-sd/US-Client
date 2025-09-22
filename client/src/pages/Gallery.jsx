@@ -29,7 +29,8 @@ const Gallary = () => {
     <div>
       <Header />
       <div className="container mx-auto p-5 lg:bg-white md:bg-white bg-gray-100">
-        <div className="p-1 mt-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mb-32 max-w-7xl mx-auto">
+          <h1 className="w-full text-2xl text-center font-bold underline">2025 Picture's</h1>
+        <div className="p-1  grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mb-32 max-w-7xl mx-auto">
           {EventsCard.map((elm, idx) => {
             return (
               <>

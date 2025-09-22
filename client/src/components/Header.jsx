@@ -6,6 +6,7 @@ import { FaSearch } from "react-icons/fa";
 const Header = () => {
   const navLinks = {
     "/": "Home",
+    "https://www.icai.org/": "ICAI Main",
     "/events": "Events",
     "/gallery": "Gallery",
     "/membership": "Membership",
@@ -105,7 +106,7 @@ const Header = () => {
               />
             </Link>
             <Link to={"/"}>
-              <p className="text-3xl font-bold text-blue-700">ICAI Seattle</p>
+              <p className="text-2xl font-bold text-blue-700">ICAI Seattle</p>
             </Link>
           </div>
 
@@ -115,7 +116,7 @@ const Header = () => {
               <Link
                 to={path}
                 key={path}
-                className="text-xl hover:text-blue-600 font-bold hover:underline transition"
+                className="text-md hover:text-blue-600 font-bold hover:underline transition"
               >
                 {label}
               </Link>
