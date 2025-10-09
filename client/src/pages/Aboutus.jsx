@@ -12,31 +12,31 @@ const Aboutus = () => {
       name: "CA. Nitin Nigam",
       link:"https://www.linkedin.com/in/nitin-nigam-8330b68/",
       role: "Chair",
-      img: "https://media.licdn.com/dms/image/v2/D4D03AQGdImLbez6nSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722901582015?e=1759363200&v=beta&t=Y1yg7LlCLMEa8nEsmtq4C80Wnhu_vYn7SgeAp1qSLIU",
+      img: "https://media.licdn.com/dms/image/v2/D4D03AQGdImLbez6nSw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722901581990?e=1762992000&v=beta&t=Ld2kl41nPkbb7tgZm9GLIMUKndCHjbP6fAoY_0DlnZg",
     },
     {
       name: "CA. Amrita Choudhary",
       link:"https://www.linkedin.com/in/amrita-choudhary-a460b2101/",
       role: "Vice-Chair",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQGCMvit-_zdSA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1716348758467?e=1759363200&v=beta&t=yM3yoM2qTKb2vunbRMDmx1F9rCFtA8z7BLJ-vhGusdc",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQF89juDpgjNhQ/profile-displayphoto-scale_200_200/B56ZnCw6wBJsAY-/0/1759909227870?e=1762992000&v=beta&t=am50xBAMSinJs6YcQcLqkTN2CTTpfV2i4leQFZRBv2o",
     },
     {
       name: "CA. Sailesh Kr.Ropolu",
       link:"https://www.linkedin.com/in/sailesh-kumar-rapolu/",
       role: "Secretary",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQHe74xyfaM3PA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730773221631?e=1759363200&v=beta&t=nlpxYombHnA0PUpDSFb1TO8Xq0NcsM3MF6TJef_GvBA",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQHe74xyfaM3PA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730773221631?e=1762992000&v=beta&t=E_LultGzOINl_ALpoJaVUfuy0qHRTaOV_4Nv05-V-bA",
     },
     {
       name: "CA. Rohit Gupta",
       link:"https://www.linkedin.com/in/rohitguptafinance/",
       role: "Treasurer",
-      img: "https://media.licdn.com/dms/image/v2/C5603AQE4HN_nlfQUQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1656473769823?e=1759363200&v=beta&t=DI1m20zi2-vvjf0sDlMqEwddPfMPQru1tmFxLCcn-XQ",
+      img: "https://media.licdn.com/dms/image/v2/C5603AQE4HN_nlfQUQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1656473769823?e=1762992000&v=beta&t=Yk-ATIDCMeYcOtCgs_scQpsNl6Co5e4yhHfpwVF6qOU",
     },
     {
       name: "CA. Ananya Jauhari",
       link:"https://www.linkedin.com/in/ananyajauhari/",
       role: "Director - Communication",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQF4JI4YmzmyEw/profile-displayphoto-shrink_200_200/B56Zdy2HV3HoAc-/0/1749978478620?e=1759363200&v=beta&t=6wAEKlLV60IFsMZl37kqJzO9Qxpdi3Mltomb-vreV7o",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQF4JI4YmzmyEw/profile-displayphoto-shrink_200_200/B56Zdy2HV3HoAc-/0/1749978478620?e=1762992000&v=beta&t=B598s2bs9-mQNETK64BJv-QOEQdzCeRVAiJ_JuEDGug",
     },
     {
       name: "CA. Radhika Bhartia",
@@ -48,13 +48,13 @@ const Aboutus = () => {
       name: "CA. Ananya Chidananda",
       link:"https://www.linkedin.com/in/ananyahc/",
       role: "Director Membership",
-      img: "https://media.licdn.com/dms/image/v2/C5603AQGazldaOkaYuQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1594542809029?e=1759363200&v=beta&t=6GX_AHpKKwODvnIRzQjbgRm0pdB2qi0yCv7FPIvulGE",
+      img: "https://media.licdn.com/dms/image/v2/C5603AQGazldaOkaYuQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1594542809029?e=1762992000&v=beta&t=1crzEvq9Rsy70e0uFs4JHQG7sl9k_7sIw6uIvhAOWhM",
     },
     {
       name: "CA. Mayuri Kulkarni",
       link:"https://www.linkedin.com/in/camayurikulkarni/",
       role: "Director - Social Media",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQGBSqEA9uumtQ/profile-displayphoto-shrink_200_200/B56ZcTCodUHEAY-/0/1748371147740?e=1759363200&v=beta&t=wiBpvRQqzRBZJH-vDopEACeaAWBRU2PJP5yfWPZAyxo",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQGBSqEA9uumtQ/profile-displayphoto-shrink_200_200/B56ZcTCodUHEAY-/0/1748371147740?e=1762992000&v=beta&t=Lk7DESgsuvne4Ul39v7Yt0NC-5ehZKBP5MkyQxgP0k4",
     },
   ];
 

@@ -100,7 +100,7 @@ const Header = () => {
           <div className="flex items-center gap-4 cursor-pointer hover:gap-5 duration-300">
             <Link to={"/"}>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E03AQGsZ6-rucQSWg/profile-displayphoto-shrink_800_800/B4EZT9Nt6oGYAc-/0/1739415019484?e=1759363200&v=beta&t=KOY9sOfr_Uep8X7IEidKgmMiCUdiowu9MPuS01wW3E8"
+                src="https://media.licdn.com/dms/image/v2/D4E0BAQHbCGpj1pS0Ng/company-logo_200_200/B4EZUB1aJ9H0AI-/0/1739492533312?e=1762992000&v=beta&t=PnnagyxeOmScV-rHr8FEKJyrYwpqaJYBqfiBb7GvBa4"
                 alt="logo"
                 className="w-14 rounded-full hover:scale-105 transition"
               />
