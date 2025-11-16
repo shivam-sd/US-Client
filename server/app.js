@@ -28,7 +28,7 @@ app.use(fileupload({
 }));
 
 app.use("/admin", adminRoutes);
-app.use("/admin", eventPostRoutes)
+app.use("/admin", eventPostRoutes);
 
 
 cloudinary.config({

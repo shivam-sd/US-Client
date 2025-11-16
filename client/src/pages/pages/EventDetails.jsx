@@ -5,28 +5,26 @@ import Footer from "../components/Footer";
 import { toast } from "react-toastify";
 
 const EventDetails = () => {
-  document.title = "Events Details || ICAI SEATTLE";
+
+  document.title = "Events Details || ICAI SEATTLE"
 
   const { id } = useParams();
+  // console.log(id);
   const [event, setEvent] = useState(null);
 
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await fetch(
-          `${import.meta.env.VITE_API_URL}admin/events/${id}`
-        );
-
+        const res = await fetch(`${import.meta.env.VITE_API_URL}admin/events/${id}`);
         if (!res.ok) throw new Error("Failed to fetch event details");
-
         const data = await res.json();
+        // console.log("Event data:", data);
         setEvent(data);
       } catch (err) {
-        toast.error("Error fetching event details");
-        console.error(err);
+        toast.error("Error fetching event details:", err.message);
+        // console.error(err);
       }
     };
-
     fetchEvent();
   }, [id]);
 
@@ -42,11 +40,6 @@ const EventDetails = () => {
   });
 
   const isUpcoming = new Date(event.date) >= new Date();
-
-  
-  const registrationLink = event.url?.startsWith("http") || event.url?.startsWith("https")
-    ? event.url
-    : `/${event.url}`;
 
   return (
     <>
@@ -70,18 +63,17 @@ const EventDetails = () => {
             <div className="mt-4">
               {isUpcoming ? (
                 <Link
-                  to={registrationLink}
-                  target={event.url?.startsWith("http") || event.url?.startsWith("https") ? "_blank" : "_self"}
+                  to={`/register/${event._id}`}
                   className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-500 transition"
                 >
-                  Register Now
+                   Register Now
                 </Link>
               ) : (
                 <button
                   disabled
                   className="inline-block bg-gray-400 text-white px-6 py-2 rounded-lg cursor-not-allowed"
                 >
-                  Registration Closed
+                   Registration Closed
                 </button>
               )}
             </div>

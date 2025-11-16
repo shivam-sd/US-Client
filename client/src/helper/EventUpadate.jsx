@@ -1,46 +1,83 @@
-import React, { useRef, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 
-const EventPostByAdmin = () => {
-  const [image, setImage] = useState(null);
-  const [preview, setPreview] = useState(null);
-  const [loading, setLoading] = useState(false);
+const EventUpdate = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const fileInputRef = useRef();
+
   const [form, setForm] = useState({
     title: "",
     location: "",
     date: "",
     time: "",
     description: "",
-    url: ""
+    url: "",
   });
+
+  const [image, setImage] = useState(null);
+  const [preview, setPreview] = useState(null);
   const [errors, setErrors] = useState({});
-  const fileInputRef = useRef();
+  const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate();
+  document.title = "Update Event || ICAI Seattle";
 
-  // Handle text input
+  // ===================================
+  // Prefill Data
+  // ===================================
+  useEffect(() => {
+    const fetchEvent = async () => {
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_API_URL}admin/events/${id}`
+        );
+        const data = await res.json();
+
+        if (!res.ok) throw new Error("Failed to load event");
+
+        setForm({
+          title: data.title,
+          location: data.location,
+          date: data.date.split("T")[0],
+          time: data.time,
+          description: data.description,
+          url: data.url,
+        });
+
+        setPreview(data.image);
+      } catch (err) {
+        toast.error("Failed to load event");
+      }
+    };
+
+    fetchEvent();
+  }, [id]);
+
+  // ===================================
+  // Input Handlers
+  // ===================================
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" });
   };
 
-  // Handle image input
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+
     if (file && file.type.startsWith("image/")) {
       setImage(file);
       setPreview(URL.createObjectURL(file));
       setErrors({ ...errors, image: "" });
     } else {
-      setImage(null);
-      setPreview(null);
-      setErrors({ ...errors, image: "Please select a valid image file." });
+      setErrors({ ...errors, image: "Please select a valid image" });
     }
   };
 
-  // Validate fields
+  // ===================================
+  // Validation
+  // ===================================
   const validate = () => {
     let temp = {};
     if (!form.title) temp.title = "Title is required";
@@ -48,14 +85,15 @@ const EventPostByAdmin = () => {
     if (!form.date) temp.date = "Date is required";
     if (!form.time) temp.time = "Time is required";
     if (!form.description) temp.description = "Description is required";
-    if (!image) temp.image = "Image is required";
-    if (!form.url) temp.url = "URL is required";
+    if (!form.url) temp.url = "Registration URL is required";
 
     setErrors(temp);
     return Object.keys(temp).length === 0;
   };
 
-  // Submit handler
+  // ===================================
+  // Submit Update
+  // ===================================
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
@@ -64,55 +102,32 @@ const EventPostByAdmin = () => {
       setLoading(true);
 
       const formData = new FormData();
-      formData.append("title", form.title);
-      formData.append("location", form.location);
-      formData.append("date", form.date);
-      formData.append("time", form.time);
-      formData.append("description", form.description);
-      formData.append("image", image);
-      formData.append("url", form.url); // FIXED BUG
+      Object.keys(form).forEach((key) => formData.append(key, form[key]));
+      if (image) formData.append("image", image);
 
-      const token = localStorage.getItem("token");
-
-      const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}admin/event/post`,
-        formData,
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}admin/events/update/${id}`,
         {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data",
-          },
+          method: "PUT",
+          body: formData,
         }
       );
 
-      if (response.status === 201) {
-        toast.success("Event Posted Successfully!");
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || "Update failed");
 
-        setForm({
-          title: "",
-          location: "",
-          date: "",
-          time: "",
-          description: "",
-          url: ""
-        });
-
-        setImage(null);
-        setPreview(null);
-
-        if (fileInputRef.current) fileInputRef.current.value = "";
-      }
-
+      toast.success("Event Updated Successfully!");
       navigate("/admindashboard");
-      setErrors({});
     } catch (error) {
-      toast.error(error?.response?.data?.error || "Something went wrong!");
-      console.error("Error posting event:", error);
+      toast.error(error.message || "Something went wrong!");
     } finally {
       setLoading(false);
     }
   };
 
+  // ===================================
+  // UI
+  // ===================================
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 py-10 px-2">
       <form
@@ -120,12 +135,11 @@ const EventPostByAdmin = () => {
         className="w-full max-w-lg bg-white rounded-3xl shadow-2xl p-8 space-y-6 animate-fade-in"
         style={{ animation: "fade-in 0.7s cubic-bezier(.4,0,.2,1)" }}
       >
-        <h2 className="text-3xl font-bold text-center text-purple-700 mb-2 tracking-tight">
-          Post New Event
+        <h2 className="text-3xl font-bold text-center text-purple-700 tracking-tight">
+          Update Event
         </h2>
 
         <div className="space-y-4">
-
           {/* Title */}
           <div>
             <label className="block text-gray-700 font-semibold mb-1">Title</label>
@@ -134,24 +148,28 @@ const EventPostByAdmin = () => {
               name="title"
               value={form.title}
               onChange={handleChange}
-              className={`w-full px-4 py-2 rounded-lg border ${errors.title ? "border-red-400" : "border-gray-300"} focus:ring-2 focus:ring-purple-400`}
-              placeholder="Enter event title"
+              className={`w-full px-4 py-2 rounded-lg border ${
+                errors.title ? "border-red-400" : "border-gray-300"
+              } focus:ring-2 focus:ring-purple-400`}
             />
-            {errors.title && <span className="text-red-500 text-sm">{errors.title}</span>}
+            {errors.title && <p className="text-red-500 text-sm">{errors.title}</p>}
           </div>
 
           {/* Location */}
           <div>
-            <label className="block text-gray-700 font-semibold mb-1">Location / Destination</label>
+            <label className="block text-gray-700 font-semibold mb-1">Location</label>
             <input
               type="text"
               name="location"
               value={form.location}
               onChange={handleChange}
-              className={`w-full px-4 py-2 rounded-lg border ${errors.location ? "border-red-400" : "border-gray-300"} focus:ring-2 focus:ring-purple-400`}
-              placeholder="Enter location"
+              className={`w-full px-4 py-2 rounded-lg border ${
+                errors.location ? "border-red-400" : "border-gray-300"
+              } focus:ring-2 focus:ring-purple-400`}
             />
-            {errors.location && <span className="text-red-500 text-sm">{errors.location}</span>}
+            {errors.location && (
+              <p className="text-red-500 text-sm">{errors.location}</p>
+            )}
           </div>
 
           {/* Date + Time */}
@@ -163,9 +181,11 @@ const EventPostByAdmin = () => {
                 name="date"
                 value={form.date}
                 onChange={handleChange}
-                className={`w-full px-4 py-2 rounded-lg border ${errors.date ? "border-red-400" : "border-gray-300"} focus:ring-2 focus:ring-purple-400`}
+                className={`w-full px-4 py-2 rounded-lg border ${
+                  errors.date ? "border-red-400" : "border-gray-300"
+                } focus:ring-2 focus:ring-purple-400`}
               />
-              {errors.date && <span className="text-red-500 text-sm">{errors.date}</span>}
+              {errors.date && <p className="text-red-500 text-sm">{errors.date}</p>}
             </div>
 
             <div className="flex-1">
@@ -175,9 +195,11 @@ const EventPostByAdmin = () => {
                 name="time"
                 value={form.time}
                 onChange={handleChange}
-                className={`w-full px-4 py-2 rounded-lg border ${errors.time ? "border-red-400" : "border-gray-300"} focus:ring-2 focus:ring-purple-400`}
+                className={`w-full px-4 py-2 rounded-lg border ${
+                  errors.time ? "border-red-400" : "border-gray-300"
+                } focus:ring-2 focus:ring-purple-400`}
               />
-              {errors.time && <span className="text-red-500 text-sm">{errors.time}</span>}
+              {errors.time && <p className="text-red-500 text-sm">{errors.time}</p>}
             </div>
           </div>
 
@@ -189,15 +211,18 @@ const EventPostByAdmin = () => {
               value={form.description}
               onChange={handleChange}
               rows="4"
-              className={`w-full px-4 py-2 rounded-lg border ${errors.description ? "border-red-400" : "border-gray-300"} focus:ring-2 focus:ring-purple-400`}
-              placeholder="Write event description..."
+              className={`w-full px-4 py-2 rounded-lg border ${
+                errors.description ? "border-red-400" : "border-gray-300"
+              } focus:ring-2 focus:ring-purple-400`}
             ></textarea>
-            {errors.description && <span className="text-red-500 text-sm">{errors.description}</span>}
+            {errors.description && (
+              <p className="text-red-500 text-sm">{errors.description}</p>
+            )}
           </div>
 
           {/* Image */}
           <div>
-            <label className="block text-gray-700 font-semibold mb-1">Upload Image</label>
+            <label className="block text-gray-700 font-semibold mb-1">Event Image</label>
 
             <div
               className={`flex items-center gap-4 border-2 border-dashed rounded-lg p-4 cursor-pointer ${
@@ -221,16 +246,16 @@ const EventPostByAdmin = () => {
                 />
               ) : (
                 <div className="w-16 h-16 bg-gray-100 flex items-center justify-center rounded-lg text-gray-400">
-                  📷
+                  📸
                 </div>
               )}
 
               <span className="text-gray-600 font-medium">
-                {image ? image.name : "Click to upload image"}
+                {image ? image.name : "Click to upload new image"}
               </span>
             </div>
 
-            {errors.image && <span className="text-red-500 text-sm">{errors.image}</span>}
+            {errors.image && <p className="text-red-500 text-sm">{errors.image}</p>}
           </div>
 
           {/* URL */}
@@ -241,10 +266,11 @@ const EventPostByAdmin = () => {
               name="url"
               value={form.url}
               onChange={handleChange}
-              className={`w-full px-4 py-2 rounded-lg border ${errors.url ? "border-red-400" : "border-gray-300"} focus:ring-2 focus:ring-purple-400`}
-              placeholder="Paste registration link"
+              className={`w-full px-4 py-2 rounded-lg border ${
+                errors.url ? "border-red-400" : "border-gray-300"
+              } focus:ring-2 focus:ring-purple-400`}
             />
-            {errors.url && <span className="text-red-500 text-sm">{errors.url}</span>}
+            {errors.url && <p className="text-red-500 text-sm">{errors.url}</p>}
           </div>
         </div>
 
@@ -252,23 +278,21 @@ const EventPostByAdmin = () => {
         <button
           type="submit"
           className={`w-full py-3 rounded-lg text-white font-bold text-lg 
-            ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-purple-500 to-pink-500"} 
+            ${loading ? "bg-gray-400" : "bg-gradient-to-r from-purple-500 to-pink-500"} 
             transition-all`}
         >
-          {loading ? "Posting..." : "Post Event"}
+          {loading ? "Updating..." : "Update Event"}
         </button>
       </form>
 
-      <style>
-        {`
-          @keyframes fade-in {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-        `}
-      </style>
+      <style>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 };
 
-export default EventPostByAdmin;
+export default EventUpdate;

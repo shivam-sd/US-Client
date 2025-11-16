@@ -11,6 +11,7 @@ import AdminAccess from "./helper/AdminAccess";
 import EventPostByAdmin from './helper/EventPostByAdmin';
 import AdminDashboard from './helper/AdminDashboard';
 import ProtectedRoute from './helper/ProtectedRoutes';
+import EventUpdate from './helper/EventUpadate';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/eventDetails/:id' element={<EventDetails />} />
         <Route path='/adminaccess' element={<AdminAccess />} />
         <Route path='/eventpostbyadmin' element={<ProtectedRoute><EventPostByAdmin /></ProtectedRoute>} />
+        <Route path='/admindashboard/events/edit/:id' element={<ProtectedRoute><EventUpdate /></ProtectedRoute>} />
         <Route path='/admindashboard' element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
       </Routes>
     </div>

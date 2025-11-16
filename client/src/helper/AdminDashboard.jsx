@@ -96,6 +96,12 @@ export default function AdminDashboard() {
                     <td className="py-3 px-4 text-center space-x-2">
                      
                       <Link
+                        to={`/admindashboard/events/edit/${ent._id}`}
+                        className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition"
+                      >
+                       Edit
+                      </Link>
+                      <Link
                         to={`/admindashboard/${ent._id}`}
                         onClick={() => handleDelete(ent._id)}
                         className="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition"
