@@ -79,7 +79,7 @@ document.title = "Home || ICAI SEATTLE"
         </div>
 
 {/* President Image and vice President */}
-<Link to={"https://www.icai.org/category/executive-members-profile"}><h1 className="w-full text-center text-2xl font-bold text-blue-500 mb-2"> President and Vice-President</h1></Link>    
+<Link to={"https://www.icai.org/category/executive-members-profile"}><h1 className="w-full text-center text-2xl font-bold text-blue-500 mb-2"> Office Bearers of ICAI for FY 2025-26</h1></Link>    
 <div className="w-full p-4 flex items-center justify-around flex-col lg:flex-row gap-5 border-1 border-rose-400/25 rounded-2xl">
 
 <Link to={"https://www.icai.org/post/president"}><img src="https://resource.cdn.icai.org/84403icai-president2025.jpg" alt="President" className="w-72" />

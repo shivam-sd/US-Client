@@ -30,7 +30,7 @@ const Contact = () => {
         setResult("Form Submitted Successfully");
         toast.success("Mail sent successfully!");
         e.target.reset();
-        setPersonType(""); // reset dropdown state
+        setPersonType("");
       } else {
         console.error("Error", data);
         toast.error(data.message || "Something went wrong!");
@@ -46,10 +46,11 @@ const Contact = () => {
   const Carddata = [
     {
       title: "Q. How can I become a member of the ICAI Seattle ?",
-      data: "You must first be a member of ICAI Seattle. Once you are a member of ICAI Seattle, you can sign up for the membership by following the process on our website.",
+      data: "You must first be a member of ICAI. Once you are a member of ICAI, you can sign up for the ICAI Seattle Chapter membership by following the process on our website.",
     },
     {
-      title: "Q. What are the benefits of becoming ICAI Seattle Chapter Member?",
+      title:
+        "Q. What are the benefits of becoming ICAI Seattle Chapter Member?",
       data: "As a member of our organization, you will have access to a variety of resources and benefits, including networking opportunities, professional development events, and educational resources.",
     },
     {
@@ -61,6 +62,7 @@ const Contact = () => {
   return (
     <div className="w-full">
       <Header />
+
       <div className="container mx-auto px-4 py-8">
         {/* FAQ Section */}
         <div className="mt-5 flex flex-col items-center gap-10">
@@ -141,7 +143,24 @@ const Contact = () => {
               />
             </div>
 
-            {/* Extra Fields */}
+            <div className="mb-4">
+              <label className="block text-lg font-medium mb-1 text-gray-700">
+                Interested to become a sponsor?{" "}
+                <span className="text-red-500">*</span>
+              </label>
+
+              <select
+                name="Interested to become a sponsor?"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              >
+                <option value="">-- Select --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            {/* Person Type */}
             <div className="mb-4">
               <label className="block text-lg font-medium mb-1 text-gray-700">
                 Details of Person
@@ -193,6 +212,7 @@ const Contact = () => {
             >
               Send
             </button>
+
             {result && (
               <p className="mt-3 text-center text-gray-500">{result}</p>
             )}
@@ -203,15 +223,15 @@ const Contact = () => {
             <p className="lg:text-4xl md:text-2xl text-2xl">
               Follow us on social media
             </p>
+
             <div className="flex items-center gap-20 justify-center mt-6 text-4xl">
               <Link
-                to={
-                  "https://www.linkedin.com/company/icai-seattle-chapter/posts/?feedView=all"
-                }
+                to="https://www.linkedin.com/company/icai-seattle-chapter/posts/?feedView=all"
                 target="_blank"
               >
                 <FaLinkedin className="text-blue-500 cursor-pointer" />
               </Link>
+
               <Link
                 className="text-red-600 text-5xl"
                 to="mailto:icaiseattle@gmail.com"
@@ -224,6 +244,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

@@ -6,12 +6,12 @@ import { FaSearch } from "react-icons/fa";
 const Header = () => {
   const navLinks = {
     "/": "Home",
-    "https://www.icai.org/": "ICAI Main",
     "/events": "Events",
     "/gallery": "Gallery",
     "/membership": "Membership",
     "/about-us": "About Us",
     "/contact": "Contact",
+    "https://www.icai.org/": "icai.org",
   };
 
   const [isMenu, setIsMenu] = useState(false);
@@ -142,7 +142,7 @@ const Header = () => {
           <div className="flex p-4 items-center justify-between">
             <div className="flex items-center gap-4 cursor-pointer">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E03AQGsZ6-rucQSWg/profile-displayphoto-shrink_800_800/B4EZT9Nt6oGYAc-/0/1739415019484?e=1759363200&v=beta&t=KOY9sOfr_Uep8X7IEidKgmMiCUdiowu9MPuS01wW3E8"
+                src="https://media.licdn.com/dms/image/v2/D4E0BAQHbCGpj1pS0Ng/company-logo_200_200/B4EZUB1aJ9H0AI-/0/1739492533312?e=1764806400&v=beta&t=ZWVL-WsQ3Q13RIUuhWfmw3ERqZT3itC_FN92AGQHoJQ"
                 alt=""
                 className="w-10 rounded-full hover:scale-105 transition"
               />

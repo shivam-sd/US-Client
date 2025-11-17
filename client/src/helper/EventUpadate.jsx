@@ -55,9 +55,6 @@ const EventUpdate = () => {
     fetchEvent();
   }, [id]);
 
-  // ===================================
-  // Input Handlers
-  // ===================================
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" });
@@ -75,9 +72,7 @@ const EventUpdate = () => {
     }
   };
 
-  // ===================================
-  // Validation
-  // ===================================
+
   const validate = () => {
     let temp = {};
     if (!form.title) temp.title = "Title is required";
@@ -91,9 +86,6 @@ const EventUpdate = () => {
     return Object.keys(temp).length === 0;
   };
 
-  // ===================================
-  // Submit Update
-  // ===================================
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
@@ -125,9 +117,7 @@ const EventUpdate = () => {
     }
   };
 
-  // ===================================
-  // UI
-  // ===================================
+  
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 py-10 px-2">
       <form

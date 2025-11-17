@@ -12,31 +12,31 @@ const Aboutus = () => {
       name: "CA. Nitin Nigam",
       link:"https://www.linkedin.com/in/nitin-nigam-8330b68/",
       role: "Chair",
-      img: "https://media.licdn.com/dms/image/v2/D4D03AQGdImLbez6nSw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722901581990?e=1762992000&v=beta&t=Ld2kl41nPkbb7tgZm9GLIMUKndCHjbP6fAoY_0DlnZg",
+      img: "https://media.licdn.com/dms/image/v2/D4D03AQGdImLbez6nSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722901582015?e=1764806400&v=beta&t=iHcEfnorznJInte490RW6A9-9P7cxxp_lZfThomakOE",
     },
     {
       name: "CA. Amrita Choudhary",
       link:"https://www.linkedin.com/in/amrita-choudhary-a460b2101/",
       role: "Vice-Chair",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQF89juDpgjNhQ/profile-displayphoto-scale_200_200/B56ZnCw6wBJsAY-/0/1759909227870?e=1762992000&v=beta&t=am50xBAMSinJs6YcQcLqkTN2CTTpfV2i4leQFZRBv2o",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQGWmbSimhTD-A/profile-displayphoto-scale_200_200/B56ZncavqoJ8AY-/0/1760339623905?e=1764806400&v=beta&t=0I1f_uqHKDRYzjT5OaJsCpGsS-Fg4aD-FFa4inC9Az4",
     },
     {
       name: "CA. Sailesh Kr.Ropolu",
       link:"https://www.linkedin.com/in/sailesh-kumar-rapolu/",
       role: "Secretary",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQHe74xyfaM3PA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730773221631?e=1762992000&v=beta&t=E_LultGzOINl_ALpoJaVUfuy0qHRTaOV_4Nv05-V-bA",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQHe74xyfaM3PA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730773221631?e=2147483647&v=beta&t=Y_275h4nHmIuSvgAgStM7uKX9876uDVSkAeTG9eq0Ss",
     },
     {
       name: "CA. Rohit Gupta",
       link:"https://www.linkedin.com/in/rohitguptafinance/",
       role: "Treasurer",
-      img: "https://media.licdn.com/dms/image/v2/C5603AQE4HN_nlfQUQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1656473769823?e=1762992000&v=beta&t=Yk-ATIDCMeYcOtCgs_scQpsNl6Co5e4yhHfpwVF6qOU",
+      img: "https://media.licdn.com/dms/image/v2/C5603AQE4HN_nlfQUQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1656473769823?e=1764806400&v=beta&t=nTHmrC7oqLAKEF4O09yOlMzMo27s-CZcj_q8YD-XBKA",
     },
     {
-      name: "CA. Ananya Jauhari",
-      link:"https://www.linkedin.com/in/ananyajauhari/",
-      role: "Director - Communication",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQF4JI4YmzmyEw/profile-displayphoto-shrink_200_200/B56Zdy2HV3HoAc-/0/1749978478620?e=1762992000&v=beta&t=B598s2bs9-mQNETK64BJv-QOEQdzCeRVAiJ_JuEDGug",
+      name: "CA. Dimple Lulla",
+      link:"https://www.linkedin.com/in/dimple-lulla18/",
+      role: "Empower Women Circle Representative",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQF2Cut7fdqn-Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1689675689315?e=1764806400&v=beta&t=FvKXWHoo2l1SuzXfua1Z-AbPa55-8aOYza5wiQd2EiA",
     },
     {
       name: "CA. Radhika Bhartia",
@@ -48,13 +48,13 @@ const Aboutus = () => {
       name: "CA. Ananya Chidananda",
       link:"https://www.linkedin.com/in/ananyahc/",
       role: "Director Membership",
-      img: "https://media.licdn.com/dms/image/v2/C5603AQGazldaOkaYuQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1594542809029?e=1762992000&v=beta&t=1crzEvq9Rsy70e0uFs4JHQG7sl9k_7sIw6uIvhAOWhM",
+      img: "https://media.licdn.com/dms/image/v2/C5603AQGazldaOkaYuQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1594542809029?e=2147483647&v=beta&t=4PmrnUHpHoqj2xKkYba51NwJ8gQKqoxODH1RC3E1sJ8",
     },
     {
       name: "CA. Mayuri Kulkarni",
       link:"https://www.linkedin.com/in/camayurikulkarni/",
       role: "Director - Social Media",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQGBSqEA9uumtQ/profile-displayphoto-shrink_200_200/B56ZcTCodUHEAY-/0/1748371147740?e=1762992000&v=beta&t=Lk7DESgsuvne4Ul39v7Yt0NC-5ehZKBP5MkyQxgP0k4",
+      img: "https://media.licdn.com/dms/image/v2/D5603AQGBSqEA9uumtQ/profile-displayphoto-shrink_400_400/B56ZcTCodUHEAg-/0/1748371147714?e=2147483647&v=beta&t=BzEVmEYUTe777fMWxbFyAucskRPxW3mjrcB2oZF6D9I",
     },
   ];
 
@@ -69,7 +69,7 @@ const Aboutus = () => {
             About ICAI Seattle
           </h1>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
-            The ICAI Seattle Chapter of the Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the Greater Seattle region.
+            The ICAI Seattle Chapter of the Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the Greater Seattle region. If you are a Chartered Accountant (CA) living in Seattle or the Greater Seattle Area, we welcome you to join our community and connect with fellow professionals.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
             <span className="text-xl font-extrabold w-full mb-4">Our key objectives are to:</span> 
