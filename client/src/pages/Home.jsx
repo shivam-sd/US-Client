@@ -106,7 +106,7 @@ document.title = "Home || ICAI SEATTLE"
   {/* Image section */}
   <div className="w-full h-72 md:h-96 lg:h-[680px] overflow-hidden rounded-xl shadow-lg">
     <img
-      src="./Team.png"
+      src="./Teams.png"
       alt="Stronger Together"
       className="lg:w-full md:w-full w-96 h-full lg:object-cover md:object-cover object-contain"
     />
