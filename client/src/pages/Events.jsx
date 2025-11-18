@@ -39,6 +39,7 @@ const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
   const today = new Date();
+  today.setHours(0,0,0,0);
   
   // console.log("API URL from env:", import.meta.env.VITE_API_URL);
   useEffect(() => {
@@ -66,8 +67,21 @@ const Events = () => {
     fetchEvents();
   }, []);
 
-  const upcoming = events.filter((event) => new Date(event.date) >= today);
-  const past = events.filter((event) => new Date(event.date) < today);
+  // const upcoming = events.filter((event) => new Date(event.date) >= today);
+
+  const upcoming = events.filter((event) => {
+  const eventDate = new Date(event.date);
+  eventDate.setHours(0, 0, 0, 0);
+  return eventDate >= today;
+});
+
+  // const past = events.filter((event) => new Date(event.date) < today);
+
+  const past = events.filter((event) => {
+  const eventDate = new Date(event.date);
+  eventDate.setHours(0, 0, 0, 0);
+  return eventDate < today;
+});
 
   upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
   past.sort((a, b) => new Date(b.date) - new Date(a.date));

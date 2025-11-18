@@ -75,13 +75,13 @@ const Aboutus = () => {
             <span className="text-xl font-extrabold w-full mb-4">Our key objectives are to:</span> 
             <br />
 
-1. Provide a platform for members of The ICAI based in the Greater Seattle Region to connect/network. <br />
-2. Promote professional development through periodic meetings and educational forums for The ICAI members. <br />
+1. Provide a platform for members of the ICAI based in the Greater Seattle Region to connect/network. <br />
+2. Promote professional development through periodic meetings and educational forums for the ICAI members. <br />
 3. Generate goodwill between the accounting fraternities of the United States and the rest of the world.  <br />
 4. Pave the path for ICAI members to work with and advance the relationship with local institutions and businesses and contribute to the well-being of the Greater Seattle Region. <br />
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            If you are a Chartered Accountant (CA) from India living in Seattle, and are interested in joining the ICAI Seattle Chapter, we
+            If you are a Chartered Accountant (CA) from India living in Seattle or Greater Seattle Area, and are interested in joining the ICAI Seattle or Greater Seattle Area Chapter, we
             invite you to explore our Membership and LinkedIn pages.
           </p>
         </div>
