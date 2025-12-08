@@ -55,7 +55,7 @@ const Header = () => {
     navigate(`/eventDetails/${id}`);
   };
 
-  // 🔹 Search Results UI (Reusable)
+  //  Search Results
   const SearchResults = ({ isMobile = false }) => (
     <>
       {filteredEvents.length > 0 && (
@@ -100,7 +100,7 @@ const Header = () => {
           <div className="flex items-center gap-4 cursor-pointer hover:gap-5 duration-300">
             <Link to={"/"}>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E0BAQHbCGpj1pS0Ng/company-logo_200_200/B4EZUB1aJ9H0AI-/0/1739492533312?e=1764806400&v=beta&t=ZWVL-WsQ3Q13RIUuhWfmw3ERqZT3itC_FN92AGQHoJQ"
+                src="logo.jpg"
                 alt="logo"
                 className="w-14 rounded-full hover:scale-105 transition"
               />
@@ -142,7 +142,7 @@ const Header = () => {
           <div className="flex p-4 items-center justify-between">
             <div className="flex items-center gap-4 cursor-pointer">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E0BAQHbCGpj1pS0Ng/company-logo_200_200/B4EZUB1aJ9H0AI-/0/1739492533312?e=1764806400&v=beta&t=ZWVL-WsQ3Q13RIUuhWfmw3ERqZT3itC_FN92AGQHoJQ"
+                src="logo.jpg"
                 alt=""
                 className="w-10 rounded-full hover:scale-105 transition"
               />

@@ -12,13 +12,13 @@ const Aboutus = () => {
       name: "CA. Nitin Nigam",
       link:"https://www.linkedin.com/in/nitin-nigam-8330b68/",
       role: "Chair",
-      img: "https://media.licdn.com/dms/image/v2/D4D03AQGdImLbez6nSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722901582015?e=1764806400&v=beta&t=iHcEfnorznJInte490RW6A9-9P7cxxp_lZfThomakOE",
+      img: "nitin.jpg",
     },
     {
       name: "CA. Amrita Choudhary",
       link:"https://www.linkedin.com/in/amrita-choudhary-a460b2101/",
       role: "Vice-Chair",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQGWmbSimhTD-A/profile-displayphoto-scale_200_200/B56ZncavqoJ8AY-/0/1760339623905?e=1764806400&v=beta&t=0I1f_uqHKDRYzjT5OaJsCpGsS-Fg4aD-FFa4inC9Az4",
+      img: "amrita.jpg",
     },
     {
       name: "CA. Sailesh Kr.Ropolu",
@@ -30,13 +30,13 @@ const Aboutus = () => {
       name: "CA. Rohit Gupta",
       link:"https://www.linkedin.com/in/rohitguptafinance/",
       role: "Treasurer",
-      img: "https://media.licdn.com/dms/image/v2/C5603AQE4HN_nlfQUQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1656473769823?e=1764806400&v=beta&t=nTHmrC7oqLAKEF4O09yOlMzMo27s-CZcj_q8YD-XBKA",
+      img: "rohit.jpg",
     },
     {
       name: "CA. Dimple Lulla",
       link:"https://www.linkedin.com/in/dimple-lulla18/",
       role: "Empower Women Circle Representative",
-      img: "https://media.licdn.com/dms/image/v2/D5603AQF2Cut7fdqn-Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1689675689315?e=1764806400&v=beta&t=FvKXWHoo2l1SuzXfua1Z-AbPa55-8aOYza5wiQd2EiA",
+      img: "dimple.jpg",
     },
     {
       name: "CA. Radhika Bhartia",
@@ -81,7 +81,7 @@ const Aboutus = () => {
 4. Pave the path for ICAI members to work with and advance the relationship with local institutions and businesses and contribute to the well-being of the Greater Seattle Region. <br />
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            If you are a Chartered Accountant (CA) from India living in Seattle or Greater Seattle Area, and are interested in joining the ICAI Seattle or Greater Seattle Area Chapter, we
+            If you are a Chartered Accountant (CA) from India living in Seattle or Greater Seattle Area, and are interested in joining the ICAI Seattle  Area Chapter, we
             invite you to explore our Membership and LinkedIn pages.
           </p>
         </div>
