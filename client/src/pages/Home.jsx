@@ -38,7 +38,7 @@ document.title = "Home || ICAI SEATTLE"
           {/* Left: Image */}
           <div className="w-full lg:w-1/3 md:w-1/2 h-80 md:h-96 flex items-center justify-center shadow-2xl rounded-2xl">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4E0BAQHbCGpj1pS0Ng/company-logo_200_200/B4EZUB1aJ9H0AI-/0/1739492533312?e=1764806400&v=beta&t=ZWVL-WsQ3Q13RIUuhWfmw3ERqZT3itC_FN92AGQHoJQ"
+              src="/hero.jpg"
               alt="ICAI Seattle"
               className="h-full object-contain rounded-2xl"
             />
