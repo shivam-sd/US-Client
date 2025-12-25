@@ -69,7 +69,7 @@ const Aboutus = () => {
             About ICAI Seattle
           </h1>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
-            The ICAI Seattle Chapter of the Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the Greater Seattle region. If you are a Chartered Accountant (CA) living in Seattle or the Greater Seattle Area, we welcome you to join our community and connect with fellow professionals.
+The ICAI Seattle Chapter of the Institute of Chartered Accountants of India (ICAI) aims to build a network of Chartered Accountants based in the Greater Seattle region. If you are a Chartered Accountant (CA) from India living in Seattle or Greater Seattle Area, and are interested in joining the ICAI Seattle we invite you to explore our Membership and LinkedIn pages.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
             <span className="text-xl font-extrabold w-full mb-4">Our key objectives are to:</span> 
