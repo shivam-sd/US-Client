@@ -81,7 +81,7 @@ The ICAI Seattle Chapter of the Institute of Chartered Accountants of India (ICA
 4. Pave the path for ICAI members to work with and advance the relationship with local institutions and businesses and contribute to the well-being of the Greater Seattle Region. <br />
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            If you are a Chartered Accountant (CA) from India living in Seattle or Greater Seattle Area, and are interested in joining the ICAI Seattle  Area Chapter, we
+            If you are a Chartered Accountant (CA) from India living in Seattle or Greater Seattle Area, and are interested in joining the ICAI Seattle Chapter, we
             invite you to explore our Membership and LinkedIn pages.
           </p>
         </div>
